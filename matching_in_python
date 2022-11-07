@@ -1,0 +1,35 @@
+>>> import re
+
+>>> result = re.search(r"man", "Germany")
+
+>>> print(result)
+
+<re.Match object; span=(3, 6), match='man'>
+
+>>> result = re.search(r"man", "policeman")
+
+>>> print(result)
+
+<re.Match object; span=(6, 9), match='man'>
+
+>>> result = re.search(r"man", "programmer")
+
+>>> print(result)
+
+None
+
+>>> print(re.search(r"^p", "potato"))
+
+<re.Match object; span=(0, 1), match='p'>
+
+>>> print(re.search(r"f.r", "forget"))
+
+<re.Match object; span=(0, 3), match='for'>
+
+>>> print(re.search(r"f.r", "Ferrari"))
+
+None
+
+>>> print(re.search(r"f.r", "Ferrari", re.IGNORECASE))
+
+<re.Match object; span=(0, 3), match='Fer'>
